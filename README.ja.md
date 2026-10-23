@@ -56,6 +56,14 @@ macOS・Windows・Linux 向けのインストーラーを [Releases](https://git
 
 デスクトップ版では、自身のマシンを他ユーザーのための **Guard** として稼働させることも可能です（「設定」→「この端末の Guard」）。Guard は専用の ID でバックグラウンド常駐し、画面をロックした状態でも中継処理を継続します。
 
+## ファイル共有を使うには
+
+ファイル共有を利用するには、ご自身の Cloudflare アカウントに中継用の Worker を 1 つ設置していただく必要があります。設置は無料で、クレジットカードの登録も必要ありません。
+
+[Releases](https://github.com/jkfujinami/Oz/releases/latest) から `OZ-worker-<バージョン>.zip` をダウンロードし、同梱の `README.txt` の手順に従って設置してください。Cloudflare の管理画面にコードを貼り付ける方法（インストール不要）と、Node.js をインストールしてスクリプト（Windows は `deploy-worker.bat`、macOS・Linux は `deploy-worker.sh`）で設置する方法があります。設置後、表示された Worker の URL を OZ の「設定」→「ファイル共有」に貼り付けてください。
+
+Worker の URL は他の参加者に共有されるため、本名や普段お使いのメールアドレスと結び付かない Cloudflare アカウントをご利用ください。
+
 ## 信頼 Guard
 
 第 1 ホップとなる Guard にはクライアントの IP アドレスが見えるため、OZ はメンテナーが署名したリストに載っている Guard を優先的に利用します。メンテナーの公開鍵は [`trust/trust.json`](trust/trust.json) に内蔵されています。署名済みリストが提供されるまでの間は、オープンネットワーク上の Guard から自動選択されます。Guard をリストに登録する手順は [`trust/README.md`](trust/README.md) を参照してください。

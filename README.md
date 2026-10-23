@@ -55,6 +55,14 @@ The builds are **not code-signed**, because signing ties an Apple or Microsoft d
 
 The desktop app can also run a **Guard** for other people (Settings → この端末の Guard). It runs in the background under its own identity and keeps running while the window is locked.
 
+## Setting up file sharing
+
+File sharing needs a relay Worker of your own on Cloudflare Workers. It is free and needs no credit card.
+
+Download `OZ-worker-<version>.zip` from [Releases](https://github.com/jkfujinami/Oz/releases/latest) and follow `README.txt` inside (Japanese). You can paste the code into the Cloudflare dashboard without installing anything, or install Node.js and run `deploy-worker.bat` (Windows) or `deploy-worker.sh` (macOS and Linux). Then paste the Worker URL into Settings → ファイル共有 in OZ.
+
+The Worker URL is shared with other participants, so use a Cloudflare account that is not tied to your real name or everyday email.
+
 ## Trusted Guards
 
 Your first hop sees your IP, so OZ prefers Guards from a list signed by the maintainer. The maintainer's public key is built into the app:
