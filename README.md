@@ -9,7 +9,6 @@
 
 <p align="center">
   <a href="https://github.com/jkfujinami/Oz/releases/latest"><b>Download</b></a> ·
-  <a href="https://ozzy-web.pages.dev/">Web version</a> ·
   <a href="TERMS.md">Terms of use</a> ·
   <a href="README.ja.md">日本語</a>
 </p>
