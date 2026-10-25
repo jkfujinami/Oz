@@ -48,7 +48,7 @@ shasum -a 256 -c SHA256SUMS.txt --ignore-missing
 
 The builds are **not code-signed**, because signing ties an Apple or Microsoft developer account to a real identity.
 
-- **macOS:** open the `.dmg` (`arm64` for Apple silicon), drag OZ to Applications, then right-click it and choose **Open** the first time.
+- **macOS:** open the `.dmg` (`arm64` for Apple silicon) and drag OZ to Applications. The first time, try to open OZ and close the warning, then go to **System Settings → Privacy & Security** and click **Open Anyway**. On macOS 14 and earlier, right-click OZ and choose **Open** instead.
 - **Windows:** run `OZ-<version>-setup.exe`. When SmartScreen warns about an unknown publisher, choose **More info → Run anyway**.
 - **Linux:** `chmod +x OZ-*.AppImage` and run it.
 
